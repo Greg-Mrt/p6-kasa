@@ -5,12 +5,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import HomePage from './pages/home';
+import AProposPage from './pages/a_propos';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 
 const router = createBrowserRouter([
   {
     path: "/a_propos",
-    element: <HomePage />,
+    element: <AProposPage />,
   },
   {
     path: "/home",

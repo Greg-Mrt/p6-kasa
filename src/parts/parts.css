@@ -1,17 +1,31 @@
 /* style du collapse */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-.collapse-element {
-    margin-bottom: 1rem;
+.collapse_block {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
   }
   
-  .collapse-element__button {
-    background: none;
-    border: none;
-    color: blue;
-    cursor: pointer;
+  .collapse_title {
+    display: flex;
+    justify-content:space-between;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    width: 100%;
+    background: #FF6060;
+    border-radius: 5px;
+    box-sizing: border-box;
   }
   
-  .collapse-element__content {
-    border: 1px solid #ccc;
-    padding: 1rem;
+  .collapse_content {
+    margin-top: 0px;
+    padding: 20px;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    background: #F7F7F7;
+    border-radius: 5px;
+    color : #FF6060;
+    box-sizing: border-box;
   }
