@@ -1,0 +1,17 @@
+/* style du collapse */
+
+.collapse-element {
+    margin-bottom: 1rem;
+  }
+  
+  .collapse-element__button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .collapse-element__content {
+    border: 1px solid #ccc;
+    padding: 1rem;
+  }
