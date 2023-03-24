@@ -2,30 +2,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 .collapse_block {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 20px;
-  }
-  
-  .collapse_title {
-    display: flex;
-    justify-content:space-between;
-    font-family: "Montserrat", sans-serif;
-    color: white;
-    padding: 10px 15px 10px 15px;
-    width: 100%;
-    background: #FF6060;
-    border-radius: 5px;
-    box-sizing: border-box;
-  }
-  
-  .collapse_content {
-    margin-top: 0px;
-    padding: 20px;
-    font-family: "Montserrat", sans-serif;
-    width: 100%;
-    background: #F7F7F7;
-    border-radius: 5px;
-    color : #FF6060;
-    box-sizing: border-box;
-  }
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+.collapse_title {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  padding: 10px 15px 10px 15px;
+  width: 100%;
+  background: #ff6060;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.collapse_content {
+  margin-top: 0px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  background: #f7f7f7;
+  border-radius: 5px;
+  color: #ff6060;
+  box-sizing: border-box;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 143px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+
+.img-banner{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}

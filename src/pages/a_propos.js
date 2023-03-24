@@ -2,11 +2,14 @@ import React from 'react';
 import Header from '../components/header';
 import CollapseElement from '../parts/collapse';
 import Footer from '../components/footer';
+import Banner from '../parts/banner';
 
 const AProposPage = () => {
   return (
     <div>
       <Header />
+
+      <Banner page="AProposPage" />
 
       <CollapseElement
         title="Fiabilité"
