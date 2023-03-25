@@ -1,17 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-.banner {
-    position: absolute;
-    width: 1240px;
-    height: 223px;
-    left: 100px;
-    top: 152px;
-    background: #000000;
-    mix-blend-mode: darken;
-    opacity: 0.3;
-    border-radius: 25px;
-}
-
 h1{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -19,4 +7,27 @@ h1{
     margin: auto;
     font-size: 200px;
     color: #FF6060;
+}
+
+.subtitle{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    font-size: 30px;
+    color: #FF6060;
+    padding-top: 20px;
+}
+
+.homeLink{
+    position: absolute;
+    left: 50%;
+    bottom: 100px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    color: #FF6060;
+    transform: translateX(-50%);
 }
