@@ -6,14 +6,14 @@ import Banner from '../parts/banner';
 
 const AProposPage = () => {
   return (
-    <div>
+    <>
       <Header />
 
       <Banner page="AProposPage" />
 
       <CollapseElement
         title="Fiabilité"
-        content={<div>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</div>}
+        content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
       />
 
       <CollapseElement
@@ -33,7 +33,7 @@ const AProposPage = () => {
 
       <Footer />
 
-    </div>
+    </>
 
   );
 };

@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/home";
 import AProposPage from "./pages/a_propos";
 import ErrorPage from "./pages/error";
+import LogementPage from "./pages/fiche_logement";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const router = createBrowserRouter([
@@ -12,8 +13,13 @@ const router = createBrowserRouter([
     element: <AProposPage />,
   },
   {
-    path: "/home",
+    path: "/",
     element: <HomePage />,
+  },
+
+  {
+    path: "/",
+    element: <LogementPage />,
   },
 
   {

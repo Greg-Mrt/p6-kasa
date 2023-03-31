@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
   return (
-    <div>
+    <>
       <Header />
 
       <h1> 404 </h1>
@@ -14,7 +14,7 @@ const ErrorPage = () => {
 
       <Link to="/home" className="homeLink">Retourner sur la page d’accueil</Link>
 
-    </div>
+    </>
   );
 };
 

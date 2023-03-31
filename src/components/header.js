@@ -36,7 +36,7 @@ const Header = () => {
       </svg>
 
       <nav>
-      <Link to="/home" className="navLink">Accueil</Link>
+      <Link to="/" className="navLink">Accueil</Link>
       <Link to="/a_propos" className="navLink2">A Propos</Link>
       </nav>
     </header>

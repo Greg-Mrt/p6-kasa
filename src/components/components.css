@@ -44,3 +44,48 @@ footer{
   color: white;
   font-size: 17px;
 }
+
+/* style propriétés page d'accueil */
+
+.blockPropreties{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: #F6F6F6;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 7px;
+}
+
+.annonceCard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 350px;
+  height: 350px;
+  border:1px solid transparent;
+  border-radius: 5px;
+  position: relative;
+  margin: 20px;
+}
+
+.annonceCard img {
+  max-width: 300%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.annonceCard p {
+position: absolute;
+left: 5px;
+bottom: 3px;
+width: 150px;
+text-align: left;
+color: white;
+}
