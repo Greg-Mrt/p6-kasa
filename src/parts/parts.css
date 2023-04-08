@@ -75,3 +75,52 @@
   text-align: center;
   font-size: 40px;
 }
+
+/* carrousel style */
+
+.carrousel{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 375px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+
+.carrousel-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.carrousel-button-prev{
+  height: 70px;
+  width: 45px;
+  color: white;
+  position: absolute;
+  left : 20px;
+  cursor: pointer;
+}
+
+.carrousel-button-next{
+  height: 70px;
+  width: 45px;
+  color: white;
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.carrousel-counter{
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+}
