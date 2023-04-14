@@ -10,14 +10,21 @@ function CollapseElement({ title, content }) {
 
   return (
     <div className="collapse_block">
-        
       <div className="collapse_title" onClick={() => setOpen(!open)}>
         {title}
         {chevron}
       </div>
       {open && (
         <div className="collapse_content">
-          {content}
+          {Array.isArray(content) ? (
+            <ul style={{ listStyleType: "none" }}>
+              {content.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{content}</p>
+          )}
         </div>
       )}
     </div>

@@ -1,33 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
-h1{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin: auto;
-    font-size: 200px;
-    color: #FF6060;
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  font-size: 200px;
+  color: #ff6060;
 }
 
-.subtitle{
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin: auto;
-    font-size: 30px;
-    color: #FF6060;
-    padding-top: 20px;
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  font-size: 30px;
+  color: #ff6060;
+  padding-top: 20px;
 }
 
-.homeLink{
-    position: absolute;
-    left: 50%;
-    bottom: 100px;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    text-align: center;
-    margin: auto;
-    font-size: 20px;
-    color: #FF6060;
-    transform: translateX(-50%);
+.homeLink {
+  position: absolute;
+  left: 50%;
+  bottom: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  color: #ff6060;
+  transform: translateX(-50%);
+}
+
+.collapse-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
+.collapse-container > * {
+  flex: 1;
+  flex-basis: 50%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 0px;
 }
