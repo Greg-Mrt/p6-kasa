@@ -5,12 +5,18 @@ import CollapseElement from "../parts/collapse";
 import Footer from "../components/footer";
 import annonces from "../ressources/annonces.json";
 import Carrousel from "../parts/carrousel";
+import InfoAppart from "../parts/infoAppart";
+import InfoHost from "../parts/infoHost";
 
 const LogementPage = () => {
   const { id } = useParams();
   const [images, setImages] = useState([]);
   const [description, setDescription] = useState("");
   const [equipments, setEquipments] = useState("");
+  const [title, setTitle] = useState("");
+  const [location, setLocation] = useState("");
+  const [tags, setTags] = useState([]);
+  const [host, setHost] = useState({});
 
   useEffect(() => {
     // on filtre les annonces pour trouver celle avec le bon ID
@@ -22,26 +28,43 @@ const LogementPage = () => {
     // On extraire la description et les equipement de l'annonce correspondante
     const desc = annonce?.description || "";
     const equip = annonce?.equipments || "";
+    const title = annonce?.title || "";
+    const location = annonce?.location || "";
+    const tags = annonce?.tags || "";
+    const host = annonce?.host || {};
 
     // On met à jour le state avec les images et les informations
     setImages(pictures);
     setDescription(desc);
     setEquipments(equip);
+    setTitle(title);
+    setLocation(location);
+    setTags(tags);
+    setHost(host);
+
   }, [id]);
 
   return (
     <>
       <Header />
 
-      <div className="fiche-logement">
-        <Carrousel images={images} />
-      </div>
+      <Carrousel images={images} />
 
-      <div className="collapse-container">
-        <CollapseElement title="Description" content={description} />
-        <CollapseElement title="Équipements" content={equipments} />
-      </div>
+      <div className="logement-container">
+        <div className="info-container">
+          <div>
+            <InfoAppart title={title} location={location} tags={tags} />
+          </div>
+          <div>
+            <InfoHost host={host} />
+          </div>
+        </div>
 
+        <div className="collapse-container">
+          <CollapseElement title="Description" content={description} />
+          <CollapseElement title="Équipements" content={equipments} />
+        </div>
+      </div>
       <Footer />
     </>
   );
