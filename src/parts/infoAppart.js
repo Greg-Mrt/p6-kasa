@@ -3,7 +3,7 @@ import './parts.css';
 
 function InfoAppart({ title, location, tags }) {
 
-  // je vais une map pour récupérer chaque tag et l'afficher de manière indépendante
+  // je fais une map pour récupérer chaque tag et l'afficher de manière indépendante
   const tagList = tags.map((tag, index) => (
     <div className="tags" key={index}>{tag}</div>
   ));

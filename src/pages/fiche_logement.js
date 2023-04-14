@@ -7,6 +7,7 @@ import annonces from "../ressources/annonces.json";
 import Carrousel from "../parts/carrousel";
 import InfoAppart from "../parts/infoAppart";
 import InfoHost from "../parts/infoHost";
+import ErrorPage from "../pages/error";
 
 const LogementPage = () => {
   const { id } = useParams();
@@ -18,6 +19,7 @@ const LogementPage = () => {
   const [tags, setTags] = useState([]);
   const [host, setHost] = useState({});
   const [rating, setRating] = useState(0);
+  const [annonce, setAnnonce] = useState({});
 
   useEffect(() => {
     // on filtre les annonces pour trouver celle avec le bon ID
@@ -44,30 +46,37 @@ const LogementPage = () => {
     setTags(tags);
     setHost(host);
     setRating(rating);
+    setAnnonce(annonce);
   }, [id]);
 
   return (
     <>
-      <Header />
+      {annonce ? (
+        <>
+          <Header />
 
-      <Carrousel images={images} />
+          <Carrousel images={images} />
 
-      <div className="logement-container">
-        <div className="info-container">
-          <div>
-            <InfoAppart title={title} location={location} tags={tags} />
+          <div className="logement-container">
+            <div className="info-container">
+              <div>
+                <InfoAppart title={title} location={location} tags={tags} />
+              </div>
+              <div>
+                <InfoHost host={host} rating={rating} />
+              </div>
+            </div>
+
+            <div className="collapse-container">
+              <CollapseElement title="Description" content={description} />
+              <CollapseElement title="Équipements" content={equipments} />
+            </div>
           </div>
-          <div>
-            <InfoHost host={host} rating={rating}/>
-          </div>
-        </div>
-
-        <div className="collapse-container">
-          <CollapseElement title="Description" content={description} />
-          <CollapseElement title="Équipements" content={equipments} />
-        </div>
-      </div>
-      <Footer />
+          <Footer />
+        </>
+      ) : 
+        <ErrorPage />
+      }
     </>
   );
 };
