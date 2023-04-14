@@ -17,6 +17,7 @@ const LogementPage = () => {
   const [location, setLocation] = useState("");
   const [tags, setTags] = useState([]);
   const [host, setHost] = useState({});
+  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     // on filtre les annonces pour trouver celle avec le bon ID
@@ -32,6 +33,7 @@ const LogementPage = () => {
     const location = annonce?.location || "";
     const tags = annonce?.tags || "";
     const host = annonce?.host || {};
+    const rating = annonce?.rating || 0;
 
     // On met à jour le state avec les images et les informations
     setImages(pictures);
@@ -41,7 +43,7 @@ const LogementPage = () => {
     setLocation(location);
     setTags(tags);
     setHost(host);
-
+    setRating(rating);
   }, [id]);
 
   return (
@@ -56,7 +58,7 @@ const LogementPage = () => {
             <InfoAppart title={title} location={location} tags={tags} />
           </div>
           <div>
-            <InfoHost host={host} />
+            <InfoHost host={host} rating={rating}/>
           </div>
         </div>
 
