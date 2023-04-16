@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './components.css';
 
 
 const Header = () => {
+
+  const location = useLocation();
+
   return (
     <header>
       <svg
@@ -36,8 +39,8 @@ const Header = () => {
       </svg>
 
       <nav>
-      <Link to="/" className="navLink">Accueil</Link>
-      <Link to="/a_propos" className="navLink2">A Propos</Link>
+      <Link to="/" className={`navLink ${location.pathname === '/' ? 'activeNavLink' : ''}`}>Accueil</Link>
+      <Link to="/a_propos" className={`navLink ${location.pathname === '/a_propos' ? 'activeNavLink' : ''}`}>A Propos</Link>
       </nav>
     </header>
   );

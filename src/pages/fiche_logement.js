@@ -28,7 +28,7 @@ const LogementPage = () => {
     // On extrait les images de l'annonce correspondante
     const pictures = annonce?.pictures || [];
 
-    // On extraire la description et les equipement de l'annonce correspondante
+    // On extrait la description et les equipement de l'annonce correspondante
     const desc = annonce?.description || "";
     const equip = annonce?.equipments || "";
     const title = annonce?.title || "";

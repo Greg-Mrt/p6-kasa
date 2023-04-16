@@ -1,8 +1,8 @@
-import React from 'react';
-import './parts.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar as solidStar } from '@fortawesome/free-solid-svg-icons'
-import { faStar as regularStar } from '@fortawesome/free-regular-svg-icons'
+import React from "react";
+import "./parts.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 
 function InfoHost({ host, rating }) {
   //je transforme le "rating" en nombre
@@ -13,14 +13,16 @@ function InfoHost({ host, rating }) {
 
   return (
     <div className="host-container">
-      <div className="host-name">{host.name}</div>
-      <img className="host-photo" src={host.picture} alt={host.name} />
+      <div className="host-subcontainer">
+        <div className="host-name">{host.name}</div>
+        <img className="host-photo" src={host.picture} alt={host.name} />
+      </div>
       <div className="host-rating">
         {stars.map((star, i) =>
           star ? (
-            <FontAwesomeIcon icon={solidStar} key={i} />
+            <FontAwesomeIcon icon={solidStar} key={i} className="solidStar" />
           ) : (
-            <FontAwesomeIcon icon={regularStar} key={i} />
+            <FontAwesomeIcon icon={solidStar} key={i} className="regularStar" />
           )
         )}
       </div>
