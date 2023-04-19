@@ -28,7 +28,7 @@ function CollapseElement({ title, content }) {
           ) : 
           // sinon on affiche le contenu normalement 
           (
-            <p>{content}</p>
+            <div>{content}</div>
           )}
         </div>
       )}

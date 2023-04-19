@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+body{
+  margin: 0px;
+}
+
 .errorTitle {
   display: flex;
   justify-content: center;
@@ -78,4 +82,5 @@
   width: 90%;
   margin-right: 5%;
   margin-left: 5%;
+  margin-bottom: 200px;
 }
