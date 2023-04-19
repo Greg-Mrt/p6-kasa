@@ -7,8 +7,8 @@ const Annonces = () => {
   return (
     <div className="blockPropreties">
       {annonces.map((annonce) => (
-        <Link to={`/fiche_logement/${annonce.id}`}>
-          <div className="annonceCard" key={annonce.id}>
+        <Link to={`/fiche_logement/${annonce.id}`} key={annonce.id}>
+          <div className="annonceCard">
             <img src={annonce.pictures[0]} alt={annonce.title} />
             <p>{annonce.title}</p>
           </div>

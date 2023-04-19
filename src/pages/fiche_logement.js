@@ -28,7 +28,7 @@ const LogementPage = () => {
     // On extrait les images de l'annonce correspondante
     const pictures = annonce?.pictures || [];
 
-    // On extrait la description et les equipement de l'annonce correspondante
+    // On extrait les éléments de l'annonce correspondante
     const desc = annonce?.description || "";
     const equip = annonce?.equipments || "";
     const title = annonce?.title || "";
@@ -37,7 +37,7 @@ const LogementPage = () => {
     const host = annonce?.host || {};
     const rating = annonce?.rating || 0;
 
-    // On met à jour le state avec les images et les informations
+    // On met à jour le state avec les éléments récupérés
     setImages(pictures);
     setDescription(desc);
     setEquipments(equip);
